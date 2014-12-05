@@ -24,7 +24,7 @@ describe 'Exercise' do
     end
 
 
-    xit "Returns the number of elements in the array" do
+    it "Returns the number of elements in the array" do
       result = Exercises.ex1([2,3,7,9,-15,7,6,9])
       expect(result).to eq(8)
     end
