@@ -31,21 +31,21 @@ describe 'Exercise' do
 
 
 
-    xit "Returns the second element of an array" do
+    it "Returns the second element of an array" do
       result = Exercises.ex2([2,3,7,9,-15,7,6,9])
       expect(result).to eq(3)
     end
 
 
 
-    xit "Returns the sum of the given array of numbers" do
+    it "Returns the sum of the given array of numbers" do
       result = Exercises.ex3([2,3,7,9,-15,7,6,9])
       expect(result).to eq(28)
     end
 
 
 
-    xit "Returns the max number of the given array" do
+    it "Returns the max number of the given array" do
       result = Exercises.ex4([2,3,7,9,-15,7,6,9])
       expect(result).to eq(9)
     end
@@ -62,21 +62,21 @@ describe 'Exercise' do
 
 
 
-    xit "Updates the last item in the array to 'panda'" do
+    it "Updates the last item in the array to 'panda'" do
       result = Exercises.ex6([2,3,7,9,-15,7,6,9])
       expect(result).to eq([2,3,7,9,-15,7,6,'panda'])
     end
 
-    xit "If the last item is already 'panda', update it to 'GODZILLA' instead" do
+    it "If the last item is already 'panda', update it to 'GODZILLA' instead" do
       result = Exercises.ex6([2,3,7,9,-15,7,6,'panda'])
       expect(result).to eq([2,3,7,9,-15,7,6,'GODZILLA'])
     end
 
 
 
-    xit "If the string `str` exists in the array, add `str` to the end of the array" do
-      result = Exercises.ex7([2,3,7,9,'str',7,6,'GODZILLA'])
-      expect(result).to eq([2,3,7,9,'str',7,6,'GODZILLA', 'str'])
+    it "If the string `str` exists in the array, add `str` to the end of the array" do
+      result = Exercises.ex7([2,3,7,9,'hello',7,6,'GODZILLA'], "hello")
+      expect(result).to eq([2,3,7,9,'hello',7,6,'GODZILLA','hello'])
     end
 
 
