@@ -81,7 +81,7 @@ describe 'Exercise' do
 
 
 
-    xit "`people` is an array of hashes. Each hash is like the following:
+    it "`people` is an array of hashes. Each hash is like the following:
     { :name => 'Bob', :occupation => 'Builder' }
     Iterate through `people` and print out their name and occupation" do
 
@@ -91,11 +91,11 @@ describe 'Exercise' do
         { :name => 'John', :occupation => 'Body Builder' }
       ]
 
-            output = capture_stdout { Exercises.ex5([2,3,7,9,-15,7,6,9]) }
-      expect(output).to eq("2\n3\n7\n9\n-15\n7\n6\n9\n") 
+      output = capture_stdout { Exercises.ex5([2,3,7,9,-15,7,6,9]) }
+      expect(output).to include("2", "3", "7", "9", "-15", "7", "6", "9") 
 
       output = capture_stdout { Exercises.ex8(people) }
-      expect(result).should incude("Bob", "Lego", "Builder", "Amber", "House", "Builder", "John", "Body", "Builder")
+      expect(output).to include("Bob", "Lego", "Builder", "Amber", "House", "Builder", "John", "Body", "Builder")
     end
 
 
