@@ -112,12 +112,16 @@ describe 'Exercise' do
 
 
 
-    xit "return \"happy hour\" if it is between 4 and 6pm" do
+    it "return \"happy hour\" if it is between 4 and 6pm" do
+      my_time = Time.new(2002, 10, 31, 16, 2, 2, "+02:00")
+      allow(Time).to receive(:now).and_return(my_time)
       result = Exercises.ex10
       expect(result).to eq('happy hour')
     end
 
-    xit "return \"normal prices\" since it's not between 4 and 6pm" do
+    it "return \"normal prices\" since it's not between 4 and 6pm" do
+      my_time = Time.new(2002, 10, 31, 2, 2, 2, "+02:00")
+      allow(Time).to receive(:now).and_return(my_time)
       result = Exercises.ex10
       expect(result).to eq("normal prices")
     end
