@@ -92,7 +92,7 @@ module Exercises
   #  - Returns the sum of two numbers if they are both integers
   #  - Raises an error if both numbers are not integers
   def self.ex11(num1, num2)
-    if (num1 === Fixnum && num2 === Fixnum)
+    if (Fixnum === num1 && Fixnum === num2)
       return num1 + num2
     end
     raise "num1: #{num1} and num2: #{num2} must both be Integers"

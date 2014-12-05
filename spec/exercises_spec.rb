@@ -52,9 +52,9 @@ describe 'Exercise' do
 
 
 
-    xit "Iterates through an array and `puts` each element" do
+    it "Iterates through an array and `puts` each element" do
       output = capture_stdout { Exercises.ex5([2,3,7,9,-15,7,6,9]) }
-      expect(output).to eq("2\n3\n7\n9\n-15\n7\n6\n9\n") 
+      expect(output).to include('2', '3', '7', '9', '-15', '7', '6', '9') 
 
       # exect($stdout).to receive(:puts).with("xyz")
       # Exercises.ex5([2,3,7,9,-15,7,6,9])
@@ -100,12 +100,12 @@ describe 'Exercise' do
 
 
 
-    xit "Returns `true` if the given time is in a leap year" do
+    it "Returns `true` if the given time is in a leap year" do
       result = Exercises.ex9(2000)
       expect(result).to eq(true)
     end
 
-    xit "return `false` if the given time is not in a leap year" do
+    it "return `false` if the given time is not in a leap year" do
       result = Exercises.ex9(1900)
       expect(result).to eq(false)
     end
@@ -113,30 +113,30 @@ describe 'Exercise' do
 
 
     xit "return \"happy hour\" if it is between 4 and 6pm" do
-      result = Exercises.ex10("happy hour")
-      expect(result).to eq("5:50pm")
+      result = Exercises.ex10
+      expect(result).to eq('happy hour')
     end
 
     xit "return \"normal prices\" since it's not between 4 and 6pm" do
-      result = Exercises.ex10("normal prices")
-      expect(result).to eq("5:50am")
+      result = Exercises.ex10
+      expect(result).to eq("normal prices")
     end
 
 
 
-    xit "return the sum of two numbers if they are both integers" do
-      result = Exercises.ex11([1, 3])
-      expect(result).to eq("hahaha")
+    it "return the sum of two numbers if they are both integers" do
+      result = Exercises.ex11(1, 3)
+      expect(result).to eq(4)
     end
 
-    xit "raises an error when either numbers is not an integer" do
-      expect( Exercises.ex11([1, 'c']) ).to raise_error
+    it "raises an error when either numbers is not an integer" do
+      expect{ Exercises.ex11(1, 'c') }.to raise_error
     end
 
 
 
-    xit " two characters arg returns an ordered array with all characters need to fill the range" do
-      result = Exercises.ex12("ha")
-      expect(result).to eq("abcdefgh".reverse)
+    it " two characters arg returns an ordered array with all characters need to fill the range" do
+      result = Exercises.ex12('a', 'h')
+      expect(result).to eq(["a", "b", "c", "d", "e", "f", "g", "h"])
     end
 end
